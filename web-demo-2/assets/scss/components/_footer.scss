@@ -1,0 +1,96 @@
+.page-footer {
+    background: url(/assets/img/shape-background-01.png) bottom 0 right 0;
+    background-repeat: no-repeat;
+    position: relative;
+    .container {
+        padding: 154px 63px 149px 60px;
+        display: flex;
+        justify-content: space-between;
+        .page-footer__box-text {
+            max-width: 838.2px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            ul{
+                font-size: 25px;
+                max-width: 234px;
+                width: 100%;
+                @include list-clean-style;
+                li {
+                    font-weight: 700;
+                    padding-bottom: 12px;
+                    a{
+                        font-weight: 400;
+                        color: $black;
+                        &:hover {
+                            color: $dark-violet;
+                        }
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(xxl) { 
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include media-breakpoint-down(xl) {
+            .page-footer__box-text {
+                max-width: 650px;
+            }
+        }
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+            .page-footer__logo {
+                padding-bottom: 50px;
+                img{
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            .page-footer__box-text {
+                max-width: 100%;
+            }
+        }
+        @include media-breakpoint-down(md){
+            .page-footer__box-text {
+                justify-content: center;
+                gap: 50px;
+                flex-wrap: wrap;
+                padding-bottom: 50px;
+                ul {
+                    max-width: 150px;
+                    li {
+                        padding-bottom: 8px;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(sm){
+            padding-top: 60px;
+            padding-bottom: 100px;
+            .page-footer__box-text {
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+    }
+    @include media-breakpoint-down(md){
+        background-position: bottom -80px right -80px;
+    }
+    .shape-footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: url(/assets/img/shape-background-02.png);
+        background-repeat: no-repeat;
+        width: 254px;
+        height: 360px;
+        @include media-breakpoint-down(lg) {
+            left: -80px;
+        }
+        @include media-breakpoint-down(sm) {
+            left: -150px;
+        }
+    }
+}

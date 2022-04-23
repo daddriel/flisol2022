@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Outfit', sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+}
+.card {
+    max-width: 330px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 15px;
+    padding: 15px;
+}
+.qr-code{
+    margin: 0 auto;
+    background: url(/image-qr-code.png);
+    border-radius: 15px;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+}
+.box-text {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.box-text h3{
+    font-size: 25px;
+    text-align: center;
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+.box-text p{
+    padding-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--grayish-blue);
+    font-weight: 400;
+}
+
+a {
+    display: block;
+    height: 50px;
+    max-width: 300px;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    background: transparent;
+}
+.blue{
+    background: blue;
+}
+.blue-outline{
+    border: 3px solid blue;
+}

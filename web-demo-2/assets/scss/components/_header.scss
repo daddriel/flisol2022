@@ -1,0 +1,88 @@
+
+//Header
+.page-header {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    z-index: 10;
+    .container {
+        display: flex;
+        align-items: center;
+
+        .page-header__logo {
+            padding-left: 22px;
+        }
+        .page-header__navigation{
+            margin-left: 254px;
+            max-width: 500px;
+            width: 100%;
+            ul {
+                @include list-clean-style;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a { 
+                    vertical-align: middle;
+                    font-size: 20.2px;
+                    color: $black;
+                    &:hover {
+                        color: $french-violet;
+                    }
+                }
+                .activate {
+                    font-size: 24.7px;
+                    color: $french-violet;
+                    font-weight: 700;
+                }
+            }
+        }
+        .dropdown {
+            display: none;
+        }
+        @include media-breakpoint-down(lg) {
+            justify-content: space-between;
+            .page-header__logo {
+                padding-left: 0;
+            }
+            .page-header__navigation{
+                margin-left: 0;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            .page-header__logo {
+                filter: invert(100%);
+            }
+            .page-header__navigation {
+                display: none;
+            }
+            .dropdown {
+                display: inline-block;
+                .fa-solid {
+                    font-size: 30px;
+                    color: $white;
+                    &:hover{
+                        color: $dark-violet;
+                    }
+                }
+                .dropdown-menu {
+                    a {
+                        &:hover {
+                            background: rgba($color: $dark-violet, $alpha: 0.3);
+                        }
+                        &:focus {
+                            background: rgba($color: $dark-violet, $alpha: 1.0);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    @include media-breakpoint-down(md) {
+        top: 10vh;
+    }
+    @include media-breakpoint-down(sm) {
+        top: 5vh;
+    }
+}
